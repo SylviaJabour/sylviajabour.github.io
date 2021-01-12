@@ -1,0 +1,60 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.main-section--home {
+  background-image: url("../images/landscape_1500.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    filter: none;
+  }
+
+  @include mediaQuery("tablet") {
+  }
+
+  @include mediaQuery("desktop") {
+    align-items: flex-end;
+  }
+}
+
+.main-section--home__text {
+  color: $color__white;
+  font-family: $font-family__title;
+  text-align: center;
+  font-size: rem(12px);
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  text-shadow: rem(1px) rem(1.5px) $color__blue-shipcove;
+  padding: rem(50px);
+
+  &--name {
+    text-transform: uppercase;
+    font-size: rem(18px);
+    font-style: normal;
+
+    @include mediaQuery("tablet") {
+      font-size: rem(26px);
+    }
+
+    @include mediaQuery("desktop") {
+      font-size: rem(28px);
+    }
+  }
+
+  @include mediaQuery("tablet") {
+    font-size: rem(14px);
+  }
+
+  @include mediaQuery("desktop") {
+    font-size: rem(16px);
+    padding: rem(80px);
+  }
+}

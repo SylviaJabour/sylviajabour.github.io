@@ -1,0 +1,30 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.main-section__contact {
+  margin-bottom: rem(100px);
+}
+.main-section__text__contact {
+  margin-bottom: rem(80px);
+  text-align: center;
+}
+
+.section-infos__type {
+  font-size: rem(14px);
+  color: $color__gray-taupe;
+  text-align: center;
+
+  &__title {
+    font-weight: $font-weight__bold;
+    color: $color__yellow-mongoose;
+    margin-right: rem(32px);
+  }
+
+  @include mediaQuery("tablet") {
+    font-size: rem(16px);
+  }
+
+  @include mediaQuery("desktop") {
+    font-size: rem(18px);
+  }
+}

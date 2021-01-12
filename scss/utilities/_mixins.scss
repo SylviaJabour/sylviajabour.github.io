@@ -1,0 +1,24 @@
+@mixin mediaQuery($breakpoint) {
+  @if $breakpoint == "tablet" {
+    @media (min-width: $breakpoint__tablet) {
+      @content;
+    }
+  } @else if $breakpoint == "desktop" {
+    @media (min-width: $breakpoint__desktop) {
+      @content;
+    }
+  } @else {
+    @error "The Breakpoint is invalid. Should be 'tablet' or 'desktop'.";
+  }
+}
+
+@mixin nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @content;
+}
+
+@function rem($target, $context: $font-size__base) {
+  @return ($target / $context) * 1rem;
+}

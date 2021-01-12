@@ -1,0 +1,29 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: $font-size__base;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family__primary;
+  background: $color__background;
+  color: $color__font-base;
+  font-weight: $font-weight__light;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: $color__font-base;
+}

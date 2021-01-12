@@ -1,0 +1,159 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+// HEADER
+
+.main-header {
+  background-color: $color__white;
+  padding: rem(32px);
+  position: relative;
+}
+
+.main-header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: rem(18px);
+  letter-spacing: rem(1.6px);
+  font-family: $font-family__title;
+
+  &__bold {
+    font-weight: $font-weight__thin;
+    color: $color__yellow-mongoose;
+  }
+
+  @include mediaQuery("tablet") {
+    font-size: rem(22px);
+  }
+
+  @include mediaQuery("desktop") {
+    font-size: rem(24px);
+  }
+}
+
+.navigation-header__hamburger {
+  cursor: pointer;
+  position: relative;
+  width: rem(20px);
+  height: rem(10px);
+
+  @include mediaQuery("tablet") {
+    display: none;
+  }
+
+  @include mediaQuery("desktop") {
+    display: none;
+  }
+}
+
+.navigation-header__hamburger--open {
+  :nth-of-type(1) {
+    transform: rotate(45deg) translateY(-2px);
+  }
+
+  :nth-of-type(2) {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+
+  :nth-of-type(3) {
+    transform: rotate(-45deg) translateY(2px);
+  }
+}
+
+.navigation-header__hamburger-line {
+  width: 100%;
+  height: rem(3px);
+  background: $color__yellow-mongoose;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: transform 0.25s, opacity 0.25s;
+  transform: translateX(0);
+
+  &:nth-of-type(1) {
+    transform-origin: top left;
+  }
+
+  &:nth-of-type(2) {
+    top: rem(5px);
+  }
+
+  &:nth-of-type(3) {
+    transform-origin: bottom left;
+    top: rem(10px);
+  }
+}
+
+.navigation-header__menu {
+  display: none;
+
+  @include mediaQuery("tablet") {
+    display: block;
+  }
+}
+
+.navigation-header__menu--open {
+  display: block;
+}
+
+.navigation-header__list {
+  margin: 0;
+  padding: rem(32px);
+  background: $color__yellow-mongoose;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  width: 100%;
+  right: 0;
+  text-align: center;
+  box-shadow: 0px 0px 4px 0px #a0a0a0;
+
+  @include mediaQuery("tablet") {
+    display: flex;
+    position: unset;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  @include mediaQuery("desktop") {
+    justify-content: flex-end;
+  }
+}
+
+.navigation-header__list__item {
+  list-style-type: none;
+  font-size: rem(16px);
+  font-weight: $font-weight__regular;
+  text-transform: uppercase;
+  padding: rem(8px);
+
+  @include mediaQuery("tablet") {
+    font-size: rem(14px);
+    padding: 0 rem(16px) 0 rem(32px);
+  }
+
+  @include mediaQuery("desktop") {
+    font-size: rem(16px);
+  }
+}
+
+.navigation-header__list__link {
+  color: $color__white;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $color__yellow-mongoose;
+  }
+
+  @include mediaQuery("tablet") {
+    color: $color__gray-taupe;
+  }
+}

@@ -1,0 +1,45 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.main-section--about {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.main-section__text__about {
+  margin: rem(50px) 0 rem(150px) 0;
+}
+
+.main-section__text--link {
+  font-weight: $font-weight__bold;
+  text-decoration: underline;
+  color: $color__blue-shipcove;
+  transition: color 0.5s;
+
+  &:hover {
+    color: $color__yellow-mongoose;
+  }
+}
+
+.main-section__photo {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid $color__gray;
+  filter: grayscale(100%);
+  transition: filter 1s;
+
+  &:hover {
+    filter: none;
+  }
+
+  @include mediaQuery("tablet") {
+    margin-right: rem(32px);
+    max-width: 210px;
+  }
+
+  @include mediaQuery("desktop") {
+    margin: 0;
+  }
+}

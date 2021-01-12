@@ -1,0 +1,39 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.main-section__text__skills {
+  margin-bottom: rem(50px);
+}
+
+.main-section__skills {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: rem(80px) 0;
+
+  &__item {
+    font-size: rem(12px);
+    list-style-type: none;
+    background-color: $color__blue-shipcove;
+    color: $color__white;
+    font-weight: $font-weight__bold;
+    padding: rem(8px);
+    border-radius: 50px;
+    margin: rem(8px);
+    box-shadow: 2px 2px 2px 0px $color__gray-taupe;
+
+    &:hover {
+      box-shadow: inset 2px 2px 2px 0px $color__gray-taupe;
+    }
+
+    @include mediaQuery("tablet") {
+      font-size: rem(14px);
+      padding: rem(10px);
+    }
+
+    @include mediaQuery("desktop") {
+      font-size: rem(16px);
+      padding: rem(12px);
+    }
+  }
+}

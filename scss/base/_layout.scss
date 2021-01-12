@@ -1,0 +1,28 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+// .content {
+// }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+// HEADER
+
+.main-section {
+  flex: 1 0 auto;
+  box-shadow: inset 0px 0px 20px 0px $color__gray-charcoal;
+}

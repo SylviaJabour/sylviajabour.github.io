@@ -1,0 +1,30 @@
+$color__white: #fff;
+$color__gray: #bbbbbb;
+$color__gray-light: #eeeeee;
+
+$color__gray-charcoal: #464646;
+$color__gray-dark-charcoal: #333333;
+$color__gray-taupe: #888888;
+
+$color__yellow-mongoose: #aa9368;
+$color__blue-shipcove: #687faa;
+
+$color__background: $color__white;
+$color__font-base: $color__gray-dark-charcoal;
+
+$breakpoint__tablet: 768px;
+$breakpoint__desktop: 1024px;
+$breakpoint__desktop: 1024px;
+
+$font-family__fallback: Helvetica, Arial, sans-serif;
+$font-family__primary: "Open Sans", $font-family__fallback;
+$font-family__secondary: "Ubuntu", $font-family__fallback;
+$font-family__title: "Orbitron", sans-serif;
+
+$font-size__base: 16px;
+
+$font-weight__thin: 100;
+$font-weight__light: 300;
+$font-weight__regular: 400;
+$font-weight__bold: 700;
+$font-weight__black: 900;

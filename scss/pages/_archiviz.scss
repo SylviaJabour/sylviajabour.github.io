@@ -1,0 +1,32 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.main-section__container--images {
+  margin: rem(8px);
+
+  @include mediaQuery("tablet") {
+    margin: 0;
+  }
+}
+
+.main-section__images {
+  width: 100%;
+  margin-bottom: rem(16px);
+  padding: rem(16px);
+  box-shadow: -1px 2px 7px 2px #a0a0a0;
+  filter: grayscale(100%);
+  transition: filter 1s;
+
+  &:hover {
+    filter: none;
+  }
+
+  @include mediaQuery("tablet") {
+    width: 47.5%;
+    margin: rem(8px) 1%;
+  }
+
+  @include mediaQuery("desktop") {
+    width: 31%;
+  }
+}

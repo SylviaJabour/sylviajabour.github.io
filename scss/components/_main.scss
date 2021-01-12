@@ -1,0 +1,38 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.sub-section-header {
+  background-color: #dbdade;
+  padding: rem(32px);
+  margin: rem(16px) 0 rem(48px) 0;
+  box-shadow: -2px 2px 3px 0px #a0a0a0;
+}
+
+.main-section__title {
+  color: $color__yellow-mongoose;
+  text-transform: uppercase;
+  font-size: rem(16px);
+
+  @include mediaQuery("tablet") {
+    font-size: rem(18px);
+  }
+
+  @include mediaQuery("desktop") {
+    font-size: rem(20px);
+  }
+}
+
+.main-section__text {
+  text-align: center;
+  font-size: rem(14px);
+  padding: rem(35px);
+
+  @include mediaQuery("tablet") {
+    font-size: rem(16px);
+    padding: rem(35px);
+  }
+
+  @include mediaQuery("desktop") {
+    font-size: rem(18px);
+  }
+}

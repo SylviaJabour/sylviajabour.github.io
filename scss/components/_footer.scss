@@ -1,0 +1,63 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+// FOOTER
+
+.main-footer {
+  background: $color__white;
+  padding: rem(32px);
+}
+
+.navigation-footer__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-footer__list__social {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-right: rem(12px);
+  opacity: 100%;
+  transition: opacity 1s;
+
+  &:hover {
+    opacity: 50%;
+  }
+
+  @include mediaQuery("tablet") {
+    width: 25px;
+    height: 25px;
+  }
+
+  @include mediaQuery("desktop") {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.twitter {
+  background-image: url("../images/twitter.svg");
+}
+.linkedin {
+  background-image: url("../images/linkedin.svg");
+}
+.github {
+  background-image: url("../images/github.svg");
+}
+
+.navigation-footer__copyright {
+  text-align: center;
+  font-size: rem(10px);
+
+  @include mediaQuery("tablet") {
+    font-size: rem(12px);
+  }
+
+  @include mediaQuery("desktop") {
+    font-size: rem(14px);
+  }
+}
